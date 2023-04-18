@@ -56,4 +56,107 @@ header .container button {
 }
 header .container button:hover {
   background-color: rgb(22, 96, 119);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.sub-header {
+  width: 100%;
+}
+.sub-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+.sub-header .container h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+.sub-header .container p {
+  font-weight: 300;
+  font-size: 20px;
+}
+.sub-header .container p a {
+  color: #1d809f;
+}
+.sub-header .container button {
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(33, 37, 41);
+  color: white;
+  width: 100%;
+  max-width: 175px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.sub-header .container button:hover {
+  background-color: #424649;
+}
+
+.services {
+  width: 100%;
+  background-color: rgb(29, 128, 159);
+}
+.services .container {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .container h3 {
+  color: rgb(236, 184, 7);
+  font-weight: 700;
+  font-size: 16px;
+}
+.services .container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
+.services .container .flex-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1272px;
+  width: 100%;
+}
+.services .container .flex-container .flex-item {
+  height: 185px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.services .container .flex-container .flex-item .icon-container {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .container .flex-container .flex-item .icon-container i {
+  font-size: 40px;
+  color: rgb(29, 128, 159);
+}
+.services .container .flex-container .flex-item strong {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+}
+.services .container .flex-container .flex-item p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*# sourceMappingURL=style.css.map */

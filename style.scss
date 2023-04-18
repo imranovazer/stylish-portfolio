@@ -1,4 +1,5 @@
 @import 'vars.scss' ;
+@import './mixins.scss';
 *{
     padding: 0;
     margin: 0;
@@ -39,23 +40,98 @@ header {
             margin-bottom: 30px;
         }
         button {
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 400;
-            background-color: $salad;
-            color: white;
-            width: 100%;
-            max-width: 175px;
-            border: none ;
-            display: flex ;
-            align-items:center ;
-            justify-content: center  ;
-            height: 65px;
-            cursor: pointer;
-            transition: 0.15s;
-            &:hover {
-               background-color: rgb(22, 96, 119); 
+            @include my-button($salad ,rgb(22, 96, 119)) ;
+           
+        }
+    }
+}
+.sub-header {
+    width: 100%;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        padding : 50px 0;
+        h2
+        {
+                font-size: calc(1.325rem + 0.9vw);
+        }
+        p {
+            font-weight: 300;
+            font-size: 20px ;
+            a{
+                color: #1d809f;
             }
         }
+        button {
+             @include my-button(rgb(33,37,41),#424649) ;
+        }
+
+    }
+}
+.services {
+    width: 100%;
+    background-color: $salad;
+    .container {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            color: rgb(236,184,7);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+        }
+        .flex-container {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1272px;
+            width: 100%;
+            .flex-item {
+                height: 185px !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                
+               
+                .icon-container{
+                    width: 112px;
+                    height: 112px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i {
+                        font-size: 40px;
+                        color: $salad;
+                    }
+                }
+                strong {
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: white    ;
+
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+        }
+        
     }
 }
