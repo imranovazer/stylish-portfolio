@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: $font700;
     text-align: center;
-
+   
 }
 
 .container {
@@ -95,13 +95,16 @@ header {
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
+            align-items: baseline;
             max-width: 1272px;
             width: 100%;
             .flex-item {
-                height: 185px !important;
+                // height: 185px !important;
                 display: flex;
+                width: 25%;
                 flex-direction: column;
                 align-items: center;
+                margin-bottom: 30px;
                 gap: 10px;
                 
                
@@ -133,5 +136,175 @@ header {
 
         }
         
+    }
+}
+
+.welcome-next-site {
+    width: 100%;
+    height:600px;
+    background-image: url('./assets/bg-callout.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            font-size: 56px;
+            font-weight: 700;
+
+        }
+        button {
+            @include my-button($salad ,rgb(22, 96, 119))
+        }
+    }
+
+}
+
+.portfolio
+{
+    .container {
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        h3 {
+            color: $gold;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 48px;
+            font-weight: 700;   
+        }
+        .projects {
+            width: 100%;
+            max-width: 1224px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+            .project {
+                width: 50%;
+                position: relative;
+                img{
+                    width: 100%;
+                    transition: 0.2s;
+                    &:hover {
+                        scale: 0.9;
+                        filter: opacity(0.6) ( #1a7798);
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
+.buttons {
+    width: 100%;
+    background-color:$salad ;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 100px 0;
+        h2 {
+            color: white;
+            font-weight: 700;
+            font-size: 32px;
+
+        }
+        .buttons
+        {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            .left{
+                @include my-button(white,#d3d4d5) ;
+                color: black
+                
+            }
+            .right {
+                @include my-button(rgb(55,59,62), #424649);
+                
+            }
+        }
+    }
+
+}
+.map{
+    width: 100%;
+    height: 30rem;
+    iframe {
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            border: 0;
+            }
+}
+
+footer {
+    width: 100%;
+    height: 290px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        .links {
+            display: flex;
+            gap: 10px;
+            a{
+                width: 64px;
+                height: 64px;
+                background-color: $salad;
+                border-radius: 50%;
+                color: white;
+                transition: 0.15;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                text-decoration: none;
+               font-size: 30px;
+                &:hover{
+                    background-color: #155d74;
+                }
+            }
+            .copy-right {
+                font-size: 14px;
+            }
+            
+        }
+
+    }
+   
+
+}
+
+
+@media only screen and (max-width: 999px) {
+    .services .container .flex-container .flex-item {
+        width: 50%;
+    }
+        
+        .portfolio .container .projects .project {
+        width: 100%;
+        max-width: 530px;
+        margin: 0 auto 10px auto;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .services .container .flex-container .flex-item {
+        width: 100%;
     }
 }
