@@ -1,5 +1,5 @@
 @import 'vars.scss' ;
-@import './mixins.scss';
+@import 'mixins.scss';
 *{
     padding: 0;
     margin: 0;
@@ -190,12 +190,37 @@ header {
             .project {
                 width: 50%;
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                cursor: pointer;
+                .text {
+                    z-index: 9;
+                    position: absolute;
+                    bottom: 70px;
+                    left: 70px;
+                    h2 {
+                        font-size: 12.5px;
+                        color: white;
+                        font-weight: 700;
+                        text-align: left;
+                    }
+                    p {
+                        font-size: 19.2px;
+                        font-weight: 300;
+                        color: white;
+                        text-align: left;
+                        max-width: 362px;
+                    }
+                }
                 img{
                     width: 100%;
-                    transition: 0.2s;
+                    transition: 0.2s ease-in-out;
+                   
                     &:hover {
                         scale: 0.9;
-                        filter: opacity(0.6) ( #1a7798);
+                        filter: opacity(0.3) drop-shadow(0 0 $salad) ;
+                       
                     }
 
                 }
